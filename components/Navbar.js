@@ -63,7 +63,10 @@ export default function Navbar() {
                             </div>
                         </li>
                         <li>
-                            <Link href="/stories">success</Link>
+                            <Link href="/scholars/Scholars">Scholars</Link>
+                        </li>
+                        <li>
+                            <Link href="/reviews/Reviews">Reviews</Link>
                         </li>
                         <li>
                             <Link href="/blog">Resources</Link>
