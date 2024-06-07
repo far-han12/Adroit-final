@@ -66,8 +66,8 @@ const Scholars = () => {
   };
   
     return (
-        <div className='mt-[64px] mb-[293px] grid gap-x-[127px]  grid-cols-3 mx-auto max-w-[1170px]'>
- <div  style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+        <div className='mt-[64px] mb-[293px] grid gap-x-[127px]  grid-cols-1 lg:grid-cols-3 mx-auto max-w-[1170px]'>
+ <div className= 'hidden lg:flex flex-col gap-[20px]' >
       <div className='border shadow-[0px_0px_16px_0px_rgba(0,0,0,0.16)] bg-[#FFFFFF]  rounded-lg p-[20px]'>
      <div className='ml-4 mb-[16px]'>
      <h3  className='text-xl '>Filter Year</h3>
@@ -96,6 +96,7 @@ const Scholars = () => {
       <div className='border shadow-[0px_0px_16px_0px_rgba(0,0,0,0.16)] bg-[#FFFFFF] rounded-lg p-[20px]'>
         <h3 className='ml-4 mb-[16px] text-xl'>Filter College</h3>
         <ul
+        className=''
           ref={collegeListRef}
           style={hideScrollbarStyle}
           onPointerDown={(e) => handlePointerDown(e, collegeListRef)}
@@ -115,7 +116,55 @@ const Scholars = () => {
         </ul>
       </div>
     </div>
-      <div className='col-span-2'>
+    <div className='lg:hidden flex flex-col gap-5'>
+        <div className='  '>
+          <div className='ml-4 mb-4'>
+            <h3 className='text-xl'>Filter Year</h3>
+          </div>
+          <div
+            ref={yearListRef}
+            className='flex space-x-2 overflow-x-auto scrollbar-hide'
+            onPointerDown={(e) => handlePointerDown(e, yearListRef)}
+            onPointerMove={(e) => handlePointerMove(e, yearListRef)}
+            onPointerUp={() => handlePointerUp(yearListRef)}
+            onPointerLeave={() => handlePointerUp(yearListRef)}
+          >
+            {years.map((year) => (
+              <div
+                key={year}
+                className={`cursor-pointer rounded-lg py-3 px-4 ${selectedYear === year ? 'bg-orange-600 text-white' : 'bg-orange-200 text-orange-600'}`}
+                onClick={() => handleYearClick(year)}
+              >
+                {year}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='mb-5'>
+          <div className='ml-4 mb-4'>
+            <h3 className='text-xl'>Filter College</h3>
+          </div>
+          <div
+            ref={collegeListRef}
+            className='flex space-x-2 overflow-x-auto scrollbar-hide'
+            onPointerDown={(e) => handlePointerDown(e, collegeListRef)}
+            onPointerMove={(e) => handlePointerMove(e, collegeListRef)}
+            onPointerUp={() => handlePointerUp(collegeListRef)}
+            onPointerLeave={() => handlePointerUp(collegeListRef)}
+          >
+            {colleges.map((college) => (
+              <div
+                key={college}
+                className={`cursor-pointer rounded-lg py-3 px-4 ${selectedCollege === college ? 'bg-orange-600 text-white' : 'bg-orange-200 text-orange-600'}`}
+                onClick={() => handleCollegeClick(college)}
+              >
+                {college}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='lg:col-span-2'>
         <div className='flex justify-between items-center'>
           <h2 className="mb-0 font-['Open-sans'] text-[#51247A] text-5xl  " >Amherst <br /> <p>College</p></h2>
           <div className=''>

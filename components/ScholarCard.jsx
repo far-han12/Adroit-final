@@ -3,7 +3,7 @@ import React from 'react';
 const ScholarCard = () => {
     return (
        <div>
-    <div className="card card-side flex flex-row mb-[27px]  bg-base-100 shadow-xl">
+    <div className="card card-side flex flex-col md:flex-row lg:flex-row mb-[27px]  bg-base-100 shadow-xl">
   <figure><img src="https://i.ibb.co/Xp3ZqKX/12.jpg" className='w-[287px] ' alt="Movie"/></figure>
   <div className="card-body">
     <h2 className="text-[32px] text-[#0C0C0C] font-semibold">Lilian Chepkoech Korir</h2>
