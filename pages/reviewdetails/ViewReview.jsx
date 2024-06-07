@@ -3,11 +3,11 @@ import React from 'react';
 
 const ViewReview = () => {
     return (
-        <div  className='my-10 mx-auto max-w-[1170px] grid grid-cols-3 gap-[124px] '>
+        <div  className='my-10 mx-auto max-w-[1170px] grid grid-cols-1 md:grid-cols-3 gap-[20px] lg:grid-cols-3 md:gap-[30px] lg:gap-[124px] '>
   <div className=''>
   <ViewReviewCard></ViewReviewCard>
   </div>
-  <div className='col-span-2 self-stretch'>
+  <div className=' md:col-span-2 lg:col-span-2 '>
   <div className="container  ">
       <section className="mb-10">
         <h1 className="text-3xl font-bold mb-4">Introduction</h1>
