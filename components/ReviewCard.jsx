@@ -3,7 +3,7 @@ import React from 'react';
 const ReviewCard = () => {
     return (
         <div>
-                         <div className=" mx-auto mb-[20px]  bg-white shadow-[0px_0px_16px_0px_rgba(0,0,0,0.16)] rounded-lg p-6">
+                         <div  className=" mx-auto mb-[20px]  bg-white shadow-[0px_0px_16px_0px_rgba(0,0,0,0.16)] rounded-lg p-6">
       <blockquote className="text-2xl font-[450] text-[#0C0C0C] mb-4">
         “Adroit didn't only help me with my admission, but helped me be a better person.”
       </blockquote>

@@ -28,7 +28,7 @@ export default function Navbar() {
     <div className='header'>
         <div className='container'>
             <div className='row'>
-                <div className='col-lg-2 col-md-2 col-sm-4 col-4'>
+                <div className='col-lg-2  col-md-2 col-sm-4 col-4'>
                     <Link href="/" className='logo'>
                         <img src='/logo.svg' alt='logo' />
                     </Link>
